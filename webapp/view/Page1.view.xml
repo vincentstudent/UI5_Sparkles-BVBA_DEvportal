@@ -1,0 +1,104 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.githubRepo.controller.Page1" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page showHeader="true" title="GitHub Creator" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <VBox alignItems="Inherit" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Center" renderType="Div" visible="true" displayInline="false" class="sapUiLargeMargin">
+                <items>
+                    <form:Form width="100%" editable="true" visible="true">
+                        <form:title>
+                            <core:Title text="Create Repository" level="Auto"/>
+                        </form:title>
+                        <form:formContainers>
+                            <form:FormContainer visible="true">
+                                <form:formElements>
+                                    <form:FormElement visible="false">
+                                        <form:label>
+                                            <Label text="Token" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <Label text="Type project" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <ComboBox placeholder="Kies type project" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                <items>
+                                                    <core:Item text="mobile &amp; web" enabled="true" key="mobile &amp; web"/>
+                                                    <core:Item text="internet of things" enabled="true" key="internet of things"/>
+                                                    <core:Item text="integration" enabled="true" key="integration"/>
+                                                    <core:Item text="SAP Fiori Extentions + SAPUI5 Apps" enabled="true" key="SAP Fiori Extentions + SAPUI5 Apps"/>
+                                                    <core:Item text="ABAP related developments" enabled="true" key="ABAP related developments"/>
+                                                </items>
+                                            </ComboBox>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <Label text="klant" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <Input id="sap_Responsive_Page_0-content-sap_m_VBox-1582297176149-items-build_simple_form_Form-1582297245994-formContainers-build_simple_form_FormContainer-1582297290571-formElements-build_simple_form_FormElement-2-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0" liveChange="_onInputLiveChange"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <Label text="projectnaam" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <Input id="sap_Responsive_Page_0-content-sap_m_VBox-1582297176149-items-build_simple_form_Form-1582297245994-formContainers-build_simple_form_FormContainer-1582297290571-formElements-build_simple_form_FormElement-3-fields-sap_m_Input-1" placeholder="" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <Label text="extra name" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <Input placeholder="Optional" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <Label text="ZIp file" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <Input placeholder="Optional" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                            <Button text="Browse..." type="Emphasized" iconFirst="true" width="10em" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                </form:formElements>
+                                <form:title/>
+                            </form:FormContainer>
+                        </form:formContainers>
+                        <form:layout>
+                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                        </form:layout>
+                    </form:Form>
+                    <ScrollContainer horizontal="true" vertical="true" width="100%" height="500px" visible="true">
+                        <content>
+                            <Tree id="sap_Responsive_Page_0-content-sap_m_VBox-1582297176149-items-sap_m_ScrollContainer-1582299510647-content-sap_m_Tree-1582299538502" mode="None" width="100%" headerText="ZipExample.zip" showSeparators="All" visible="true" items="{path:'hierarchicalModel>/static/sap_Responsive_Page_0-content-sap_m_VBox-1582297176149-items-sap_m_ScrollContainer-1582299510647-content-sap_m_Tree-1582299538502'}">
+                                <items>
+                                    <StandardTreeItem title="{hierarchicalModel>name}" type="Active" visible="true" counter="{hierarchicalModel>null}"/>
+                                </items>
+                            </Tree>
+                        </content>
+                    </ScrollContainer>
+                </items>
+                <layoutData/>
+            </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="60px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Next" type="Emphasized" iconFirst="true" width="8em" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Back" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
